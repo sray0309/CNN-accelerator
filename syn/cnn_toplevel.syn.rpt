@@ -1,0 +1,1363 @@
+Warning: Design 'cnn_toplevel' has '7' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+check_design summary:
+Version:     O-2018.06
+Date:        Thu Apr 16 20:29:14 2020
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     37
+    Multiply driven inputs (LINT-6)                                37
+
+Nets                                                                2
+    Multiply driven net with constant driver (LINT-54)              2
+
+Tristate                                                            2
+    A tristate bus has a non tri-state driver (LINT-34)             2
+--------------------------------------------------------------------------------
+
+Warning: In design 'cnn_toplevel', input port 'clk' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'reset' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'enable' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_filter[7]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_filter[6]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_filter[5]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_filter[4]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_filter[3]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_filter[2]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_filter[1]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_filter[0]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_kernel[7]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_kernel[6]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_kernel[5]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_kernel[4]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_kernel[3]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_kernel[2]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_kernel[1]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_kernel[0]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'filter_length[7]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'filter_length[6]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'filter_length[5]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'filter_length[4]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'filter_length[3]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'filter_length[2]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'filter_length[1]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'filter_length[0]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_total_conv[7]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_total_conv[6]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_total_conv[5]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_total_conv[4]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_total_conv[3]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_total_conv[2]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_total_conv[1]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'num_total_conv[0]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'write_enable_b' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', input port 'mem_addr_b' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cnn_toplevel', three-state bus 'n2' has non three-state driver 'U3/**logic_0**'. (LINT-34)
+Warning: In design 'cnn_toplevel', three-state bus 'n1' has non three-state driver 'U2/**logic_0**'. (LINT-34)
+Warning: In design 'cnn_toplevel', multiply-driven net 'n2' is driven by constant 0. (LINT-54)
+Warning: In design 'cnn_toplevel', multiply-driven net 'n1' is driven by constant 0. (LINT-54)
+1
+Warning: Design 'cnn_toplevel' has '7' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : cnn_toplevel
+Version: O-2018.06
+Date   : Thu Apr 16 20:29:14 2020
+****************************************
+
+Library(s) Used:
+
+    No libraries used.
+
+Number of ports:                          113
+Number of nets:                           458
+Number of cells:                           10
+Number of combinational cells:              0
+Number of sequential cells:                10
+Number of macros/black boxes:               0
+Number of buf/inv:                          0
+Number of references:                       8
+
+Combinational area:                  0.000000
+Buf/Inv area:                        0.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:           30240.155334
+
+Total cell area:                     0.000000
+Total area:                      30240.155334
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1
+Information: Propagating switching activity (medium effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated black box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort medium
+Design : cnn_toplevel
+Version: O-2018.06
+Date   : Thu Apr 16 20:29:14 2020
+****************************************
+
+
+Library(s) Used:
+
+    No libraries used.
+
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+cnn_toplevel           ibm13_wl10        typical
+
+
+Global Operating Voltage = 1.2  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+cnn_toplevel                              0.255    0.000    0.000    0.255 100.0
+1
+Warning: Design 'cnn_toplevel' has '7' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : design
+Design : cnn_toplevel
+Version: O-2018.06
+Date   : Thu Apr 16 20:29:14 2020
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    No libraries used.
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : typical
+    Library : typical
+    Process :   1.00
+    Temperature :  25.00
+    Voltage :   1.20
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    Selected manually by the user.
+
+Name           :   ibm13_wl10
+Location       :   typical
+Resistance     :   8.5e-08
+Capacitance    :   0.00015
+Area           :   0.7
+Slope          :   66.667
+Fanout   Length   Points Average Cap Std Deviation
+--------------------------------------------------------------
+     1    66.67
+
+
+
+Wire Loading Model Mode: segmented.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1
+Warning: Design 'cnn_toplevel' has '7' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : cell
+Design : cnn_toplevel
+Version: O-2018.06
+Date   : Thu Apr 16 20:29:14 2020
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    p - parameterized
+    r - removable
+   so - sizing only
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+ctrl                      controller                      0.000000  b, p, so
+filter_addr_delay         register_sync                   0.000000  b, p, so
+input_load_delay          register_sync                   0.000000  b, p, so
+outMEM                    CNN_outMEM                      0.000000  b, so
+pea                       pe_array                        0.000000  b, p, so
+pedr                      pe_decoder                      0.000000  b, p
+rom1                      CNN_ROM1                        0.000000  b, so
+rom2                      CNN_ROM2                        0.000000  b, so
+--------------------------------------------------------------------------------
+Total 8 cells                                             0.000000
+1
+Warning: Design 'cnn_toplevel' has '7' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : port
+        -verbose
+Design : cnn_toplevel
+Version: O-2018.06
+Date   : Thu Apr 16 20:29:15 2020
+****************************************
+
+
+
+Attributes:
+    d - dont_touch_network
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+clk            in      0.0000   0.0000    1.02    0.17   --         d
+enable         in      0.0000   0.0000    1.02    0.17   --         
+filter_length[0]
+               in      0.0000   0.0000    1.02    0.17   --         
+filter_length[1]
+               in      0.0000   0.0000    1.02    0.17   --         
+filter_length[2]
+               in      0.0000   0.0000    1.02    0.17   --         
+filter_length[3]
+               in      0.0000   0.0000    1.02    0.17   --         
+filter_length[4]
+               in      0.0000   0.0000    1.02    0.17   --         
+filter_length[5]
+               in      0.0000   0.0000    1.02    0.17   --         
+filter_length[6]
+               in      0.0000   0.0000    1.02    0.17   --         
+filter_length[7]
+               in      0.0000   0.0000    1.02    0.17   --         
+mem_addr_b     in      0.0000   0.0000    1.02    0.17   --         
+num_filter[0]  in      0.0000   0.0000    1.02    0.17   --         
+num_filter[1]  in      0.0000   0.0000    1.02    0.17   --         
+num_filter[2]  in      0.0000   0.0000    1.02    0.17   --         
+num_filter[3]  in      0.0000   0.0000    1.02    0.17   --         
+num_filter[4]  in      0.0000   0.0000    1.02    0.17   --         
+num_filter[5]  in      0.0000   0.0000    1.02    0.17   --         
+num_filter[6]  in      0.0000   0.0000    1.02    0.17   --         
+num_filter[7]  in      0.0000   0.0000    1.02    0.17   --         
+num_kernel[0]  in      0.0000   0.0000    1.02    0.17   --         
+num_kernel[1]  in      0.0000   0.0000    1.02    0.17   --         
+num_kernel[2]  in      0.0000   0.0000    1.02    0.17   --         
+num_kernel[3]  in      0.0000   0.0000    1.02    0.17   --         
+num_kernel[4]  in      0.0000   0.0000    1.02    0.17   --         
+num_kernel[5]  in      0.0000   0.0000    1.02    0.17   --         
+num_kernel[6]  in      0.0000   0.0000    1.02    0.17   --         
+num_kernel[7]  in      0.0000   0.0000    1.02    0.17   --         
+num_total_conv[0]
+               in      0.0000   0.0000    1.02    0.17   --         
+num_total_conv[1]
+               in      0.0000   0.0000    1.02    0.17   --         
+num_total_conv[2]
+               in      0.0000   0.0000    1.02    0.17   --         
+num_total_conv[3]
+               in      0.0000   0.0000    1.02    0.17   --         
+num_total_conv[4]
+               in      0.0000   0.0000    1.02    0.17   --         
+num_total_conv[5]
+               in      0.0000   0.0000    1.02    0.17   --         
+num_total_conv[6]
+               in      0.0000   0.0000    1.02    0.17   --         
+num_total_conv[7]
+               in      0.0000   0.0000    1.02    0.17   --         
+reset          in      0.0000   0.0000    1.02    0.17   --         
+write_enable_b in      0.0000   0.0000    1.02    0.17   --         
+conv           out     0.0100   0.0000   --      --      --         
+mem_out[0]     out     0.0100   0.0000   --      --      --         
+mem_out[1]     out     0.0100   0.0000   --      --      --         
+mem_out[2]     out     0.0100   0.0000   --      --      --         
+mem_out[3]     out     0.0100   0.0000   --      --      --         
+mem_out[4]     out     0.0100   0.0000   --      --      --         
+mem_out[5]     out     0.0100   0.0000   --      --      --         
+mem_out[6]     out     0.0100   0.0000   --      --      --         
+mem_out[7]     out     0.0100   0.0000   --      --      --         
+mem_out[8]     out     0.0100   0.0000   --      --      --         
+mem_out[9]     out     0.0100   0.0000   --      --      --         
+mem_out[10]    out     0.0100   0.0000   --      --      --         
+mem_out[11]    out     0.0100   0.0000   --      --      --         
+mem_out[12]    out     0.0100   0.0000   --      --      --         
+mem_out[13]    out     0.0100   0.0000   --      --      --         
+mem_out[14]    out     0.0100   0.0000   --      --      --         
+mem_out[15]    out     0.0100   0.0000   --      --      --         
+mem_out[16]    out     0.0100   0.0000   --      --      --         
+mem_out[17]    out     0.0100   0.0000   --      --      --         
+mem_out[18]    out     0.0100   0.0000   --      --      --         
+mem_out[19]    out     0.0100   0.0000   --      --      --         
+mem_out[20]    out     0.0100   0.0000   --      --      --         
+mem_out[21]    out     0.0100   0.0000   --      --      --         
+mem_out[22]    out     0.0100   0.0000   --      --      --         
+mem_out[23]    out     0.0100   0.0000   --      --      --         
+mem_out[24]    out     0.0100   0.0000   --      --      --         
+mem_out[25]    out     0.0100   0.0000   --      --      --         
+mem_out[26]    out     0.0100   0.0000   --      --      --         
+mem_out[27]    out     0.0100   0.0000   --      --      --         
+mem_out[28]    out     0.0100   0.0000   --      --      --         
+mem_out[29]    out     0.0100   0.0000   --      --      --         
+mem_out[30]    out     0.0100   0.0000   --      --      --         
+mem_out[31]    out     0.0100   0.0000   --      --      --         
+mem_out[32]    out     0.0100   0.0000   --      --      --         
+mem_out[33]    out     0.0100   0.0000   --      --      --         
+mem_out[34]    out     0.0100   0.0000   --      --      --         
+mem_out[35]    out     0.0100   0.0000   --      --      --         
+mem_out[36]    out     0.0100   0.0000   --      --      --         
+mem_out[37]    out     0.0100   0.0000   --      --      --         
+mem_out[38]    out     0.0100   0.0000   --      --      --         
+mem_out[39]    out     0.0100   0.0000   --      --      --         
+mem_out[40]    out     0.0100   0.0000   --      --      --         
+mem_out[41]    out     0.0100   0.0000   --      --      --         
+mem_out[42]    out     0.0100   0.0000   --      --      --         
+mem_out[43]    out     0.0100   0.0000   --      --      --         
+mem_out[44]    out     0.0100   0.0000   --      --      --         
+mem_out[45]    out     0.0100   0.0000   --      --      --         
+mem_out[46]    out     0.0100   0.0000   --      --      --         
+mem_out[47]    out     0.0100   0.0000   --      --      --         
+mem_out[48]    out     0.0100   0.0000   --      --      --         
+mem_out[49]    out     0.0100   0.0000   --      --      --         
+mem_out[50]    out     0.0100   0.0000   --      --      --         
+mem_out[51]    out     0.0100   0.0000   --      --      --         
+mem_out[52]    out     0.0100   0.0000   --      --      --         
+mem_out[53]    out     0.0100   0.0000   --      --      --         
+mem_out[54]    out     0.0100   0.0000   --      --      --         
+mem_out[55]    out     0.0100   0.0000   --      --      --         
+mem_out[56]    out     0.0100   0.0000   --      --      --         
+mem_out[57]    out     0.0100   0.0000   --      --      --         
+mem_out[58]    out     0.0100   0.0000   --      --      --         
+mem_out[59]    out     0.0100   0.0000   --      --      --         
+mem_out[60]    out     0.0100   0.0000   --      --      --         
+mem_out[61]    out     0.0100   0.0000   --      --      --         
+mem_out[62]    out     0.0100   0.0000   --      --      --         
+mem_out[63]    out     0.0100   0.0000   --      --      --         
+outmem_addr[0] out     0.0100   0.0000   --      --      --         
+outmem_addr[1] out     0.0100   0.0000   --      --      --         
+outmem_addr[2] out     0.0100   0.0000   --      --      --         
+outmem_addr[3] out     0.0100   0.0000   --      --      --         
+outmem_addr[4] out     0.0100   0.0000   --      --      --         
+outmem_addr[5] out     0.0100   0.0000   --      --      --         
+outmem_addr[6] out     0.0100   0.0000   --      --      --         
+outmem_addr[7] out     0.0100   0.0000   --      --      --         
+outmem_addr[8] out     0.0100   0.0000   --      --      --         
+outmem_addr[9] out     0.0100   0.0000   --      --      --         
+write_enable_a out     0.0100   0.0000   --      --      --         
+
+
+              External  Max             Min                Min       Min
+              Number    Wireload        Wireload           Pin       Wire
+Port          Points    Model           Model              Load      Load
+--------------------------------------------------------------------------------
+clk                1      --              --              --        -- 
+enable             1      --              --              --        -- 
+filter_length[0]
+                   1      --              --              --        -- 
+filter_length[1]
+                   1      --              --              --        -- 
+filter_length[2]
+                   1      --              --              --        -- 
+filter_length[3]
+                   1      --              --              --        -- 
+filter_length[4]
+                   1      --              --              --        -- 
+filter_length[5]
+                   1      --              --              --        -- 
+filter_length[6]
+                   1      --              --              --        -- 
+filter_length[7]
+                   1      --              --              --        -- 
+mem_addr_b         1      --              --              --        -- 
+num_filter[0]      1      --              --              --        -- 
+num_filter[1]      1      --              --              --        -- 
+num_filter[2]      1      --              --              --        -- 
+num_filter[3]      1      --              --              --        -- 
+num_filter[4]      1      --              --              --        -- 
+num_filter[5]      1      --              --              --        -- 
+num_filter[6]      1      --              --              --        -- 
+num_filter[7]      1      --              --              --        -- 
+num_kernel[0]      1      --              --              --        -- 
+num_kernel[1]      1      --              --              --        -- 
+num_kernel[2]      1      --              --              --        -- 
+num_kernel[3]      1      --              --              --        -- 
+num_kernel[4]      1      --              --              --        -- 
+num_kernel[5]      1      --              --              --        -- 
+num_kernel[6]      1      --              --              --        -- 
+num_kernel[7]      1      --              --              --        -- 
+num_total_conv[0]
+                   1      --              --              --        -- 
+num_total_conv[1]
+                   1      --              --              --        -- 
+num_total_conv[2]
+                   1      --              --              --        -- 
+num_total_conv[3]
+                   1      --              --              --        -- 
+num_total_conv[4]
+                   1      --              --              --        -- 
+num_total_conv[5]
+                   1      --              --              --        -- 
+num_total_conv[6]
+                   1      --              --              --        -- 
+num_total_conv[7]
+                   1      --              --              --        -- 
+reset              1      --              --              --        -- 
+write_enable_b
+                   1      --              --              --        -- 
+conv               1      --              --              --        -- 
+mem_out[0]         1      --              --              --        -- 
+mem_out[1]         1      --              --              --        -- 
+mem_out[2]         1      --              --              --        -- 
+mem_out[3]         1      --              --              --        -- 
+mem_out[4]         1      --              --              --        -- 
+mem_out[5]         1      --              --              --        -- 
+mem_out[6]         1      --              --              --        -- 
+mem_out[7]         1      --              --              --        -- 
+mem_out[8]         1      --              --              --        -- 
+mem_out[9]         1      --              --              --        -- 
+mem_out[10]        1      --              --              --        -- 
+mem_out[11]        1      --              --              --        -- 
+mem_out[12]        1      --              --              --        -- 
+mem_out[13]        1      --              --              --        -- 
+mem_out[14]        1      --              --              --        -- 
+mem_out[15]        1      --              --              --        -- 
+mem_out[16]        1      --              --              --        -- 
+mem_out[17]        1      --              --              --        -- 
+mem_out[18]        1      --              --              --        -- 
+mem_out[19]        1      --              --              --        -- 
+mem_out[20]        1      --              --              --        -- 
+mem_out[21]        1      --              --              --        -- 
+mem_out[22]        1      --              --              --        -- 
+mem_out[23]        1      --              --              --        -- 
+mem_out[24]        1      --              --              --        -- 
+mem_out[25]        1      --              --              --        -- 
+mem_out[26]        1      --              --              --        -- 
+mem_out[27]        1      --              --              --        -- 
+mem_out[28]        1      --              --              --        -- 
+mem_out[29]        1      --              --              --        -- 
+mem_out[30]        1      --              --              --        -- 
+mem_out[31]        1      --              --              --        -- 
+mem_out[32]        1      --              --              --        -- 
+mem_out[33]        1      --              --              --        -- 
+mem_out[34]        1      --              --              --        -- 
+mem_out[35]        1      --              --              --        -- 
+mem_out[36]        1      --              --              --        -- 
+mem_out[37]        1      --              --              --        -- 
+mem_out[38]        1      --              --              --        -- 
+mem_out[39]        1      --              --              --        -- 
+mem_out[40]        1      --              --              --        -- 
+mem_out[41]        1      --              --              --        -- 
+mem_out[42]        1      --              --              --        -- 
+mem_out[43]        1      --              --              --        -- 
+mem_out[44]        1      --              --              --        -- 
+mem_out[45]        1      --              --              --        -- 
+mem_out[46]        1      --              --              --        -- 
+mem_out[47]        1      --              --              --        -- 
+mem_out[48]        1      --              --              --        -- 
+mem_out[49]        1      --              --              --        -- 
+mem_out[50]        1      --              --              --        -- 
+mem_out[51]        1      --              --              --        -- 
+mem_out[52]        1      --              --              --        -- 
+mem_out[53]        1      --              --              --        -- 
+mem_out[54]        1      --              --              --        -- 
+mem_out[55]        1      --              --              --        -- 
+mem_out[56]        1      --              --              --        -- 
+mem_out[57]        1      --              --              --        -- 
+mem_out[58]        1      --              --              --        -- 
+mem_out[59]        1      --              --              --        -- 
+mem_out[60]        1      --              --              --        -- 
+mem_out[61]        1      --              --              --        -- 
+mem_out[62]        1      --              --              --        -- 
+mem_out[63]        1      --              --              --        -- 
+outmem_addr[0]
+                   1      --              --              --        -- 
+outmem_addr[1]
+                   1      --              --              --        -- 
+outmem_addr[2]
+                   1      --              --              --        -- 
+outmem_addr[3]
+                   1      --              --              --        -- 
+outmem_addr[4]
+                   1      --              --              --        -- 
+outmem_addr[5]
+                   1      --              --              --        -- 
+outmem_addr[6]
+                   1      --              --              --        -- 
+outmem_addr[7]
+                   1      --              --              --        -- 
+outmem_addr[8]
+                   1      --              --              --        -- 
+outmem_addr[9]
+                   1      --              --              --        -- 
+write_enable_a
+                   1      --              --              --        -- 
+
+                    Input Delay
+                  Min             Max       Related   Max
+Input Port    Rise    Fall    Rise    Fall   Clock  Fanout
+--------------------------------------------------------------------------------
+clk           --      --      --      --      --      -- 
+enable        0.10    0.10    0.10    0.10  clk       --    
+filter_length[0]
+              0.10    0.10    0.10    0.10  clk       --    
+filter_length[1]
+              0.10    0.10    0.10    0.10  clk       --    
+filter_length[2]
+              0.10    0.10    0.10    0.10  clk       --    
+filter_length[3]
+              0.10    0.10    0.10    0.10  clk       --    
+filter_length[4]
+              0.10    0.10    0.10    0.10  clk       --    
+filter_length[5]
+              0.10    0.10    0.10    0.10  clk       --    
+filter_length[6]
+              0.10    0.10    0.10    0.10  clk       --    
+filter_length[7]
+              0.10    0.10    0.10    0.10  clk       --    
+mem_addr_b    0.10    0.10    0.10    0.10  clk       --    
+num_filter[0]
+              0.10    0.10    0.10    0.10  clk       --    
+num_filter[1]
+              0.10    0.10    0.10    0.10  clk       --    
+num_filter[2]
+              0.10    0.10    0.10    0.10  clk       --    
+num_filter[3]
+              0.10    0.10    0.10    0.10  clk       --    
+num_filter[4]
+              0.10    0.10    0.10    0.10  clk       --    
+num_filter[5]
+              0.10    0.10    0.10    0.10  clk       --    
+num_filter[6]
+              0.10    0.10    0.10    0.10  clk       --    
+num_filter[7]
+              0.10    0.10    0.10    0.10  clk       --    
+num_kernel[0]
+              0.10    0.10    0.10    0.10  clk       --    
+num_kernel[1]
+              0.10    0.10    0.10    0.10  clk       --    
+num_kernel[2]
+              0.10    0.10    0.10    0.10  clk       --    
+num_kernel[3]
+              0.10    0.10    0.10    0.10  clk       --    
+num_kernel[4]
+              0.10    0.10    0.10    0.10  clk       --    
+num_kernel[5]
+              0.10    0.10    0.10    0.10  clk       --    
+num_kernel[6]
+              0.10    0.10    0.10    0.10  clk       --    
+num_kernel[7]
+              0.10    0.10    0.10    0.10  clk       --    
+num_total_conv[0]
+              0.10    0.10    0.10    0.10  clk       --    
+num_total_conv[1]
+              0.10    0.10    0.10    0.10  clk       --    
+num_total_conv[2]
+              0.10    0.10    0.10    0.10  clk       --    
+num_total_conv[3]
+              0.10    0.10    0.10    0.10  clk       --    
+num_total_conv[4]
+              0.10    0.10    0.10    0.10  clk       --    
+num_total_conv[5]
+              0.10    0.10    0.10    0.10  clk       --    
+num_total_conv[6]
+              0.10    0.10    0.10    0.10  clk       --    
+num_total_conv[7]
+              0.10    0.10    0.10    0.10  clk       --    
+reset         0.10    0.10    0.10    0.10  clk       --    
+write_enable_b
+              0.10    0.10    0.10    0.10  clk       --    
+
+
+                    Driving Cell
+Input Port   Rise(min/max)      Fall(min/max)      Mult(min/max)  Attrs(min/max)
+--------------------------------------------------------------------------------
+clk          INVX2TR            INVX2TR              -- /  --     
+enable       INVX2TR            INVX2TR              -- /  --     
+filter_length[0]
+             INVX2TR            INVX2TR              -- /  --     
+filter_length[1]
+             INVX2TR            INVX2TR              -- /  --     
+filter_length[2]
+             INVX2TR            INVX2TR              -- /  --     
+filter_length[3]
+             INVX2TR            INVX2TR              -- /  --     
+filter_length[4]
+             INVX2TR            INVX2TR              -- /  --     
+filter_length[5]
+             INVX2TR            INVX2TR              -- /  --     
+filter_length[6]
+             INVX2TR            INVX2TR              -- /  --     
+filter_length[7]
+             INVX2TR            INVX2TR              -- /  --     
+mem_addr_b   INVX2TR            INVX2TR              -- /  --     
+num_filter[0]
+             INVX2TR            INVX2TR              -- /  --     
+num_filter[1]
+             INVX2TR            INVX2TR              -- /  --     
+num_filter[2]
+             INVX2TR            INVX2TR              -- /  --     
+num_filter[3]
+             INVX2TR            INVX2TR              -- /  --     
+num_filter[4]
+             INVX2TR            INVX2TR              -- /  --     
+num_filter[5]
+             INVX2TR            INVX2TR              -- /  --     
+num_filter[6]
+             INVX2TR            INVX2TR              -- /  --     
+num_filter[7]
+             INVX2TR            INVX2TR              -- /  --     
+num_kernel[0]
+             INVX2TR            INVX2TR              -- /  --     
+num_kernel[1]
+             INVX2TR            INVX2TR              -- /  --     
+num_kernel[2]
+             INVX2TR            INVX2TR              -- /  --     
+num_kernel[3]
+             INVX2TR            INVX2TR              -- /  --     
+num_kernel[4]
+             INVX2TR            INVX2TR              -- /  --     
+num_kernel[5]
+             INVX2TR            INVX2TR              -- /  --     
+num_kernel[6]
+             INVX2TR            INVX2TR              -- /  --     
+num_kernel[7]
+             INVX2TR            INVX2TR              -- /  --     
+num_total_conv[0]
+             INVX2TR            INVX2TR              -- /  --     
+num_total_conv[1]
+             INVX2TR            INVX2TR              -- /  --     
+num_total_conv[2]
+             INVX2TR            INVX2TR              -- /  --     
+num_total_conv[3]
+             INVX2TR            INVX2TR              -- /  --     
+num_total_conv[4]
+             INVX2TR            INVX2TR              -- /  --     
+num_total_conv[5]
+             INVX2TR            INVX2TR              -- /  --     
+num_total_conv[6]
+             INVX2TR            INVX2TR              -- /  --     
+num_total_conv[7]
+             INVX2TR            INVX2TR              -- /  --     
+reset        INVX2TR            INVX2TR              -- /  --     
+write_enable_b
+             INVX2TR            INVX2TR              -- /  --     
+
+
+               Max Drive      Min Drive      Resistance    Min    Min       Cell
+Input Port    Rise    Fall   Rise    Fall   Max     Min    Cap    Fanout    Deg
+--------------------------------------------------------------------------------
+clk           --      --     --      --     --      --     --     --        -- 
+enable        --      --     --      --     --      --     --     --        -- 
+filter_length[0]
+              --      --     --      --     --      --     --     --        -- 
+filter_length[1]
+              --      --     --      --     --      --     --     --        -- 
+filter_length[2]
+              --      --     --      --     --      --     --     --        -- 
+filter_length[3]
+              --      --     --      --     --      --     --     --        -- 
+filter_length[4]
+              --      --     --      --     --      --     --     --        -- 
+filter_length[5]
+              --      --     --      --     --      --     --     --        -- 
+filter_length[6]
+              --      --     --      --     --      --     --     --        -- 
+filter_length[7]
+              --      --     --      --     --      --     --     --        -- 
+mem_addr_b    --      --     --      --     --      --     --     --        -- 
+num_filter[0]
+              --      --     --      --     --      --     --     --        -- 
+num_filter[1]
+              --      --     --      --     --      --     --     --        -- 
+num_filter[2]
+              --      --     --      --     --      --     --     --        -- 
+num_filter[3]
+              --      --     --      --     --      --     --     --        -- 
+num_filter[4]
+              --      --     --      --     --      --     --     --        -- 
+num_filter[5]
+              --      --     --      --     --      --     --     --        -- 
+num_filter[6]
+              --      --     --      --     --      --     --     --        -- 
+num_filter[7]
+              --      --     --      --     --      --     --     --        -- 
+num_kernel[0]
+              --      --     --      --     --      --     --     --        -- 
+num_kernel[1]
+              --      --     --      --     --      --     --     --        -- 
+num_kernel[2]
+              --      --     --      --     --      --     --     --        -- 
+num_kernel[3]
+              --      --     --      --     --      --     --     --        -- 
+num_kernel[4]
+              --      --     --      --     --      --     --     --        -- 
+num_kernel[5]
+              --      --     --      --     --      --     --     --        -- 
+num_kernel[6]
+              --      --     --      --     --      --     --     --        -- 
+num_kernel[7]
+              --      --     --      --     --      --     --     --        -- 
+num_total_conv[0]
+              --      --     --      --     --      --     --     --        -- 
+num_total_conv[1]
+              --      --     --      --     --      --     --     --        -- 
+num_total_conv[2]
+              --      --     --      --     --      --     --     --        -- 
+num_total_conv[3]
+              --      --     --      --     --      --     --     --        -- 
+num_total_conv[4]
+              --      --     --      --     --      --     --     --        -- 
+num_total_conv[5]
+              --      --     --      --     --      --     --     --        -- 
+num_total_conv[6]
+              --      --     --      --     --      --     --     --        -- 
+num_total_conv[7]
+              --      --     --      --     --      --     --     --        -- 
+reset         --      --     --      --     --      --     --     --        -- 
+write_enable_b
+              --      --     --      --     --      --     --     --        -- 
+
+
+               Max Tran        Min Tran
+Input Port    Rise    Fall    Rise    Fall
+--------------------------------------------------------------------------------
+clk           --      --      --      -- 
+enable        --      --      --      -- 
+filter_length[0]
+              --      --      --      -- 
+filter_length[1]
+              --      --      --      -- 
+filter_length[2]
+              --      --      --      -- 
+filter_length[3]
+              --      --      --      -- 
+filter_length[4]
+              --      --      --      -- 
+filter_length[5]
+              --      --      --      -- 
+filter_length[6]
+              --      --      --      -- 
+filter_length[7]
+              --      --      --      -- 
+mem_addr_b    --      --      --      -- 
+num_filter[0]
+              --      --      --      -- 
+num_filter[1]
+              --      --      --      -- 
+num_filter[2]
+              --      --      --      -- 
+num_filter[3]
+              --      --      --      -- 
+num_filter[4]
+              --      --      --      -- 
+num_filter[5]
+              --      --      --      -- 
+num_filter[6]
+              --      --      --      -- 
+num_filter[7]
+              --      --      --      -- 
+num_kernel[0]
+              --      --      --      -- 
+num_kernel[1]
+              --      --      --      -- 
+num_kernel[2]
+              --      --      --      -- 
+num_kernel[3]
+              --      --      --      -- 
+num_kernel[4]
+              --      --      --      -- 
+num_kernel[5]
+              --      --      --      -- 
+num_kernel[6]
+              --      --      --      -- 
+num_kernel[7]
+              --      --      --      -- 
+num_total_conv[0]
+              --      --      --      -- 
+num_total_conv[1]
+              --      --      --      -- 
+num_total_conv[2]
+              --      --      --      -- 
+num_total_conv[3]
+              --      --      --      -- 
+num_total_conv[4]
+              --      --      --      -- 
+num_total_conv[5]
+              --      --      --      -- 
+num_total_conv[6]
+              --      --      --      -- 
+num_total_conv[7]
+              --      --      --      -- 
+reset         --      --      --      -- 
+write_enable_b
+              --      --      --      -- 
+
+
+                    Output Delay
+                  Min             Max      Related  Fanout
+Output Port   Rise    Fall    Rise    Fall  Clock     Load
+--------------------------------------------------------------------------------
+conv          0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[0]    0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[1]    0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[2]    0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[3]    0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[4]    0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[5]    0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[6]    0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[7]    0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[8]    0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[9]    0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[10]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[11]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[12]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[13]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[14]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[15]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[16]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[17]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[18]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[19]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[20]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[21]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[22]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[23]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[24]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[25]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[26]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[27]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[28]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[29]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[30]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[31]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[32]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[33]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[34]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[35]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[36]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[37]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[38]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[39]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[40]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[41]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[42]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[43]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[44]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[45]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[46]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[47]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[48]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[49]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[50]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[51]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[52]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[53]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[54]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[55]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[56]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[57]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[58]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[59]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[60]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[61]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[62]   0.10    0.10    0.10    0.10  clk       0.00  
+mem_out[63]   0.10    0.10    0.10    0.10  clk       0.00  
+outmem_addr[0]
+              0.10    0.10    0.10    0.10  clk       0.00  
+outmem_addr[1]
+              0.10    0.10    0.10    0.10  clk       0.00  
+outmem_addr[2]
+              0.10    0.10    0.10    0.10  clk       0.00  
+outmem_addr[3]
+              0.10    0.10    0.10    0.10  clk       0.00  
+outmem_addr[4]
+              0.10    0.10    0.10    0.10  clk       0.00  
+outmem_addr[5]
+              0.10    0.10    0.10    0.10  clk       0.00  
+outmem_addr[6]
+              0.10    0.10    0.10    0.10  clk       0.00  
+outmem_addr[7]
+              0.10    0.10    0.10    0.10  clk       0.00  
+outmem_addr[8]
+              0.10    0.10    0.10    0.10  clk       0.00  
+outmem_addr[9]
+              0.10    0.10    0.10    0.10  clk       0.00  
+write_enable_a
+              0.10    0.10    0.10    0.10  clk       0.00  
+
+1
+Warning: Design 'cnn_toplevel' has '7' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : compile_options
+Design : cnn_toplevel
+Version: O-2018.06
+Date   : Thu Apr 16 20:29:15 2020
+****************************************
+
+Design                                   Compile Option         Value
+--------------------------------------------------------------------------------
+cnn_toplevel                             flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         isolate_port           disabled
+--------------------------------------------------------------------------------
+1
+Warning: Design 'cnn_toplevel' has '7' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : cnn_toplevel
+Version: O-2018.06
+Date   : Thu Apr 16 20:29:15 2020
+****************************************
+
+This design has no violated constraints.
+
+1
+Warning: Design 'cnn_toplevel' has '7' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 100
+        -max_paths 20
+Design : cnn_toplevel
+Version: O-2018.06
+Date   : Thu Apr 16 20:29:15 2020
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: segmented
+
+  Startpoint: ctrl/outmem_addr[9] (internal pin)
+  Endpoint: outmem_addr[9]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ctrl/outmem_addr[9] (controller)         0.00       0.00 r
+  outmem_addr[9] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: outMEM/AA[9] (internal pin)
+  Endpoint: outmem_addr[9]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  outMEM/AA[9] (CNN_outMEM)                0.00       0.00 r
+  outmem_addr[9] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ctrl/outmem_addr[8] (internal pin)
+  Endpoint: outmem_addr[8]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ctrl/outmem_addr[8] (controller)         0.00       0.00 r
+  outmem_addr[8] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: outMEM/AA[8] (internal pin)
+  Endpoint: outmem_addr[8]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  outMEM/AA[8] (CNN_outMEM)                0.00       0.00 r
+  outmem_addr[8] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ctrl/outmem_addr[7] (internal pin)
+  Endpoint: outmem_addr[7]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ctrl/outmem_addr[7] (controller)         0.00       0.00 r
+  outmem_addr[7] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: outMEM/AA[7] (internal pin)
+  Endpoint: outmem_addr[7]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  outMEM/AA[7] (CNN_outMEM)                0.00       0.00 r
+  outmem_addr[7] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ctrl/outmem_addr[6] (internal pin)
+  Endpoint: outmem_addr[6]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ctrl/outmem_addr[6] (controller)         0.00       0.00 r
+  outmem_addr[6] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: outMEM/AA[6] (internal pin)
+  Endpoint: outmem_addr[6]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  outMEM/AA[6] (CNN_outMEM)                0.00       0.00 r
+  outmem_addr[6] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ctrl/outmem_addr[5] (internal pin)
+  Endpoint: outmem_addr[5]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ctrl/outmem_addr[5] (controller)         0.00       0.00 r
+  outmem_addr[5] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: outMEM/AA[5] (internal pin)
+  Endpoint: outmem_addr[5]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  outMEM/AA[5] (CNN_outMEM)                0.00       0.00 r
+  outmem_addr[5] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ctrl/outmem_addr[4] (internal pin)
+  Endpoint: outmem_addr[4]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ctrl/outmem_addr[4] (controller)         0.00       0.00 r
+  outmem_addr[4] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: outMEM/AA[4] (internal pin)
+  Endpoint: outmem_addr[4]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  outMEM/AA[4] (CNN_outMEM)                0.00       0.00 r
+  outmem_addr[4] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ctrl/outmem_addr[3] (internal pin)
+  Endpoint: outmem_addr[3]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ctrl/outmem_addr[3] (controller)         0.00       0.00 r
+  outmem_addr[3] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: outMEM/AA[3] (internal pin)
+  Endpoint: outmem_addr[3]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  outMEM/AA[3] (CNN_outMEM)                0.00       0.00 r
+  outmem_addr[3] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ctrl/outmem_addr[2] (internal pin)
+  Endpoint: outmem_addr[2]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ctrl/outmem_addr[2] (controller)         0.00       0.00 r
+  outmem_addr[2] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: outMEM/AA[2] (internal pin)
+  Endpoint: outmem_addr[2]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  outMEM/AA[2] (CNN_outMEM)                0.00       0.00 r
+  outmem_addr[2] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ctrl/outmem_addr[1] (internal pin)
+  Endpoint: outmem_addr[1]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ctrl/outmem_addr[1] (controller)         0.00       0.00 r
+  outmem_addr[1] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: outMEM/AA[1] (internal pin)
+  Endpoint: outmem_addr[1]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  outMEM/AA[1] (CNN_outMEM)                0.00       0.00 r
+  outmem_addr[1] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ctrl/outmem_addr[0] (internal pin)
+  Endpoint: outmem_addr[0]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ctrl/outmem_addr[0] (controller)         0.00       0.00 r
+  outmem_addr[0] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: outMEM/AA[0] (internal pin)
+  Endpoint: outmem_addr[0]
+            (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_toplevel       ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  outMEM/AA[0] (CNN_outMEM)                0.00       0.00 r
+  outmem_addr[0] (out)                     0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

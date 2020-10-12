@@ -1,0 +1,86 @@
+{
+    "Mem_cnnin2": [
+        "Mem_cnnin2",
+        "KkmZS",
+        "module",
+        1
+    ],
+    "_vcs_unit__1804203956": [
+        "_vcs_unit__1804203956",
+        "LBFU6",
+        "module",
+        13
+    ],
+    "pe_0000": [
+        "pe_0000",
+        "YGBaV",
+        "module",
+        8
+    ],
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        2
+    ],
+    "register_sync_0002": [
+        "register_sync_0002",
+        "DzaeU",
+        "module",
+        5
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        11
+    ],
+    "toplevel_tb": [
+        "toplevel_tb",
+        "CWUge",
+        "module",
+        14
+    ],
+    "register_sync_0000": [
+        "register_sync_0000",
+        "tw6p0",
+        "module",
+        3
+    ],
+    "register_sync_0001": [
+        "register_sync_0001",
+        "Qngba",
+        "module",
+        4
+    ],
+    "shifter": [
+        "shifter",
+        "CFT7G",
+        "module",
+        7
+    ],
+    "signed_adder_0000": [
+        "signed_adder_0000",
+        "zUEYG",
+        "module",
+        6
+    ],
+    "Mem_cnnin1": [
+        "Mem_cnnin1",
+        "rn1Z1",
+        "module",
+        9
+    ],
+    "CNN_outMEM": [
+        "CNN_outMEM",
+        "mMHiq",
+        "module",
+        10
+    ],
+    "CNN_ROM2": [
+        "CNN_ROM2",
+        "q6JL2",
+        "module",
+        15
+    ]
+}

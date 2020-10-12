@@ -1,0 +1,162 @@
+0 
+45
++define+DEBUG
++incdir+
++libext+.v+.vlib+.vh
++lint=TFIPC-L
++multisource_int_delays
++neg_tchk
++overlap
++plusarg_save
++v2k
++vc
++vcs+lic+wait
++warn=noSDFCOM_IANE
++warn=noSDFCOM_IWSBA
++warn=noSDFCOM_PONF
++warn=noSDFCOM_UHICD
++warn=noSDFCOM_UHICD,noSDFCOM_IWSBA,noSDFCOM_IANE,noSDFCOM_PONF
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/usr/caen/vcs-2017.12-SP2-1/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /usr/caen/vcs-2017.12-SP2-1/linux64/lib/libvirsim.so /usr/caen/vcs-2017.12-SP2-1/linux64/lib/liberrorinf.so /usr/caen/vcs-2017.12-SP2-1/linux64/lib/libsnpsmalloc.so /usr/caen/vcs-2017.12-SP2-1/linux64/lib/libvfs.so
+-Mout=sim
+-Msaverestoreobj=/usr/caen/vcs-2017.12-SP2-1/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/usr/caen/vcs-2017.12-SP2-1/include
+-full64
+-gen_obj
+-o sim
+-picarchive
+-sverilog
+-timescale=1ns/1ps
+/usr/caen/vcs-2017.12-SP2-1/linux64/bin/vcs1
+cnn_toplevel.v
+controller.v
+pe_array.v
+pe_decoder.v
+sys_defs.vh
+toplevel_tb.v
+89
+sysc_uni_pwd=/afs/umich.edu/class/eecs627/w20/group5/Convolution/ConvCore_withMemory/testbench
+mraarch=linux_64
+installdir=/usr/caen/hspice-2016.06/hspice
+_LMFILES_=/usr/caen/misc/modules/mmsim/15.10.498:/usr/caen/misc/modules/cadence-ic/6.1.7.500.2100:/usr/caen/misc/modules/calibre/2015.2_36.27:/usr/caen/misc/modules/synopsys-synth/2018.06:/usr/caen/misc/modules/innovus/18.10.000:/usr/caen/misc/modules/hspice/2016.06:/usr/caen/misc/modules/vcs/2017.12-SP2-1:/usr/caen/misc/modules/primetime/2018.06-1:/usr/caen/misc/modules/xa/2017.12-SP4:/afs/umich.edu/class/coe/modules/eecs627/w20
+XLIB_SKIP_ARGB_VISUALS=1
+XDG_VTNR=1
+XDG_SESSION_TYPE=x11
+XDG_SESSION_ID=1
+XDG_SESSION_DESKTOP=gnome-classic
+XDG_SEAT=seat0
+XDG_RUNTIME_DIR=/run/user/114194817
+XDG_MENU_PREFIX=gnome-
+XDG_DATA_DIRS=/home/rayss/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/:/usr/caen/misc/menus
+XDG_CURRENT_DESKTOP=GNOME-Classic:GNOME
+XAUTHORITY=/run/gdm/auth-for-rayss-kzldbf/database
+WINDOWPATH=1
+VTE_VERSION=5202
+VMR_MODE_FLAG=64
+VCS_MODE_FLAG=64
+VCS_HOME=/usr/caen/vcs-2017.12-SP2-1
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux64
+USERNAME=rayss
+UNAME=/bin/uname
+TOOL_HOME=/usr/caen/vcs-2017.12-SP2-1/linux64
+TMIARCH=RH_64
+SYNOPSYS=/usr/caen/synopsys-synth-2018.06
+SSH_AUTH_SOCK=/run/user/114194817/keyring/ssh
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SSH_AGENT_PID=2212
+SNPS_VCS_CLANG_PATH=/fs/src/interfaces/LLVM_Project/QSCM/opt/llvm-3.9.1/linux64
+SNPS_PLATFORM=linux64
+SNPS_64=1
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2051,unix/unix:/tmp/.ICE-unix/2051
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+QT_IM_MODULE=ibus
+QT_GRAPHICSSYSTEM_CHECKED=1
+OVA_UUM=0
+MSI2LMP_LIBRARY=/usr/share/lammps/frc_files
+MODULESHOME=/usr/share/Modules
+MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/caen/misc/modules:/afs/umich.edu/class/coe/modules
+MGLS_LICENSE_FILE=/usr/caen/FLEXlm/data/license.dat.mentor
+MGC_HOME=/usr/caen/calibre-2015.2_36.27
+MFLAGS=
+MAKELEVEL=1
+MAKEFLAGS=
+LOADEDMODULES=mmsim/15.10.498:cadence-ic/6.1.7.500.2100:calibre/2015.2_36.27:synopsys-synth/2018.06:innovus/18.10.000:hspice/2016.06:vcs/2017.12-SP2-1:primetime/2018.06-1:xa/2017.12-SP4:eecs627/w20
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_TIME=en_US.UTF-8
+LC_PAPER=en_US.UTF-8
+LC_NUMERIC=en_US.UTF-8
+LC_MONETARY=en_US.UTF-8
+LC_MEASUREMENT=en_US.UTF-8
+LC_ALL=C
+LAMMPS_POTENTIALS=/usr/share/lammps/potentials
+KRB5CCNAME=FILE:/tmp/krb5cc_114194817_Fq8ikR
+KDEDIRS=/usr
+IMSETTINGS_MODULE=none
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+ICEAUTHORITY=/run/user/114194817/iceauthority
+HSP_HOME=/usr/caen/hspice-2016.06/hspice
+HSP_GCC_VERSION=4.8.3
+HSP_GCC=/usr/caen/hspice-2016.06/hspice/GNU/linux64/gcc-4.8.3/bin/gcc -m64
+HISTCONTROL=ignoredups
+GNOME_TERMINAL_SERVICE=:1.107
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/ba0f6ec0_5890_40f5_ac54_5bde6fa4c351
+GNOME_SHELL_SESSION_MODE=classic
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GDM_LANG=en_US.UTF-8
+GDMSESSION=gnome-classic
+DESKTOP_SESSION=gnome-classic
+DD_DONT_DO_OS_LOCKS=SET
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-kxg80aQ953,guid=173f015ae11afb814e2b4f625f84cf68
+COLORTERM=truecolor
+CMIARCH=RH_64
+CLS_CDSD_COMPATIBILITY_LOCKING=NO
+CDS_VERSION=IC6
+CDS_Netlisting_Mode=Analog
+CDS_LOAD_ENV=CSF
+CDS_INSTALL_DIR=/usr/caen/ic-6.1.7.500.2100/tools/dfII
+CDS_AUTO_64BIT=ALL
+CDSHOME=/usr/caen/ic-6.1.7.500.2100
+CDS=/usr/caen/ic-6.1.7.500.2100
+CALIBRE_HOME=/usr/caen/calibre-2015.2_36.27
+BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
+ARCH=linux64
+0
+16
+1585578617 ../verilog/CNN_ROM2.v
+1585578608 ../verilog/CNN_ROM1.v
+1585713437 ../verilog/Memory/Mem_cnnout/CNN_outMEM.v
+1585757242 ../verilog/Memory/Mem_cnnin/Mem_cnnin2.v
+1585774413 ../verilog/Memory/Mem_cnnin/Mem_cnnin1.v
+1582419773 ../verilog/pe.v
+1581572836 ../verilog/shifter.v
+1582494522 ../verilog/signed_adder.v
+1581901136 ../verilog/counter.v
+1581811072 ../verilog/register_sync.v
+1585777052 toplevel_tb.v
+1585777190 cnn_toplevel.v
+1583639283 pe_array.v
+1581892418 pe_decoder.v
+1585777378 controller.v
+1581788083 sys_defs.vh
+5
+0 
+1531625631 /usr/caen/vcs-2017.12-SP2-1/linux64/lib/libvirsim.so
+1531624898 /usr/caen/vcs-2017.12-SP2-1/linux64/lib/liberrorinf.so
+1531624871 /usr/caen/vcs-2017.12-SP2-1/linux64/lib/libsnpsmalloc.so
+1531625298 /usr/caen/vcs-2017.12-SP2-1/linux64/lib/libvfs.so
+1602540436 sim.daidir

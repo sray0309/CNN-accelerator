@@ -1,0 +1,1034 @@
+/*
+ *      CONFIDENTIAL  AND  PROPRIETARY SOFTWARE OF ARM Physical IP, INC.
+ *      
+ *      Copyright (c) 1993-2020  ARM Physical IP, Inc.  All  Rights Reserved.
+ *      
+ *      Use of this Software is subject to the terms and conditions  of the
+ *      applicable license agreement with ARM Physical IP, Inc.  In addition,
+ *      this Software is protected by patents, copyright law and international
+ *      treaties.
+ *      
+ *      The copyright notice(s) in this Software does not indicate actual or
+ *      intended publication of this Software.
+ *      
+ *      name:			High Speed/Density Dual Port SRAM Generator
+ *           			IBM CMRF8SF-LPVT Process
+ *      version:		2009Q1V1
+ *      comment:		
+ *      configuration:	 -instname "Mem_cnnin1" -words 256 -bits 64 -frequency 1 -ring_width 4.0 -mux 4 -write_mask off -wp_size 8 -top_layer "met5-8" -power_type rings -horiz met3 -vert met4 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 6 -dpccm on -asvm on -libname USERLIB -corners ff_1p32v_m40c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_125c
+ *
+ *      Synopsys model for Synchronous Dual-Port Ram
+ *
+ *      Library Name:   USERLIB
+ *      Instance Name:  Mem_cnnin1
+ *      Words:          256
+ *      Word Width:     64
+ *      Mux:            4
+ *      Corner:        tt_1p2v_25c
+ *
+ *      Creation Date:  2020-04-01 15:07:55Z
+ *      Version:        2009Q1V1
+ *
+ *      Verified With: Synopsys Design Compiler
+ *
+ *      Modeling Assumptions: This library contains a black box description
+ *          for a memory element.  At the library level, a
+ *          default_max_transition constraint is set to the maximum
+ *          characterized input slew.  Each output has a max_capacitance
+ *          constraint set to the highest characterized output load.  These two
+ *          constraints force Design Compiler to synthesize circuits that
+ *          operate within the characterization space.  The user can tighten
+ *          these constraints, if desired.  When writing SDF from Design
+ *          Compiler, use the version 2.1 option.  This ensures the SDF will
+ *          annotate to simulation models provided with this generator.
+ *
+ *      Modeling Limitations: 
+ *          Due to limitations of the .lib format, some data reduction was
+ *          necessary.  When reducing data, minimum values were chosen for the
+ *          fast case corner and maximum values were used for the typical and
+ *          best case corners.  It is recommended that critical timing and
+ *          setup and hold times be checked at all corners.
+ *
+ *      Known Bugs: None.
+ *
+ *      Known Work Arounds: N/A
+ *
+ */
+
+library(USERLIB) {
+	delay_model		: table_lookup;
+	revision		: 1.1;	
+	date			: "2020-04-01 15:07:55Z";
+	comment			: "Confidential Information of ARM Physical IP, Inc.  Use subject to ARM Physical IP, Inc. license.  Copyright (c) 1993-2020 ARM Physical IP, Inc.";
+	time_unit		: "1ns";
+	voltage_unit		: "1V";
+	current_unit		: "1mA";
+	leakage_power_unit	: "1mW";
+	nom_process		: 1;
+	nom_temperature		: 25.000;
+	nom_voltage		: 1.200;
+	capacitive_load_unit	 (1,pf);
+
+	pulling_resistance_unit	        : "1kohm";
+
+	/* additional header data */
+	default_cell_leakage_power      : 0;
+	default_fanout_load		: 1;
+	default_inout_pin_cap		: 0.005;
+	default_input_pin_cap		: 0.005;
+	default_output_pin_cap		: 0.0;
+	default_max_transition		: 1.000;
+
+        /* default attributes */
+        default_leakage_power_density : 0.0;
+        slew_derate_from_library      : 1.000;
+        slew_lower_threshold_pct_fall : 10.000;
+        slew_upper_threshold_pct_fall : 90.000;
+        slew_lower_threshold_pct_rise : 10.000;
+        slew_upper_threshold_pct_rise : 90.000;
+        input_threshold_pct_fall      : 50.000;
+        input_threshold_pct_rise      : 50.000;
+        output_threshold_pct_fall     : 50.000;
+        output_threshold_pct_rise     : 50.000;
+
+ 	/* k-factors */
+ 	k_process_cell_fall             : 1;
+ 	k_process_cell_leakage_power    : 0;
+ 	k_process_cell_rise             : 1;
+ 	k_process_fall_transition       : 1;
+ 	k_process_hold_fall             : 1;
+ 	k_process_hold_rise             : 1;
+ 	k_process_internal_power        : 0;
+ 	k_process_min_pulse_width_high  : 1;
+ 	k_process_min_pulse_width_low   : 1;
+ 	k_process_pin_cap               : 0;
+ 	k_process_recovery_fall         : 1;
+ 	k_process_recovery_rise         : 1;
+ 	k_process_rise_transition       : 1;
+ 	k_process_setup_fall            : 1;
+ 	k_process_setup_rise            : 1;
+ 	k_process_wire_cap              : 0;
+ 	k_process_wire_res              : 0;
+	k_temp_cell_fall		: 0.000;
+	k_temp_cell_rise		: 0.000;
+	k_temp_hold_fall                : 0.000;
+	k_temp_hold_rise                : 0.000;
+	k_temp_min_pulse_width_high     : 0.000;
+	k_temp_min_pulse_width_low      : 0.000;
+	k_temp_min_period               : 0.000;
+	k_temp_rise_propagation         : 0.000;
+	k_temp_fall_propagation         : 0.000;
+	k_temp_rise_transition          : 0.0;
+	k_temp_fall_transition          : 0.0;
+	k_temp_recovery_fall            : 0.000;
+	k_temp_recovery_rise            : 0.000;
+	k_temp_setup_fall               : 0.000;
+	k_temp_setup_rise               : 0.000;
+	k_volt_cell_fall                : 0.000;
+	k_volt_cell_rise                : 0.000;
+	k_volt_hold_fall                : 0.000;
+	k_volt_hold_rise                : 0.000;
+	k_volt_min_pulse_width_high     : 0.000;
+	k_volt_min_pulse_width_low      : 0.000;
+	k_volt_min_period               : 0.000;
+	k_volt_rise_propagation         : 0.000;
+	k_volt_fall_propagation         : 0.000;
+	k_volt_rise_transition	        : 0.0;
+	k_volt_fall_transition	        : 0.0;
+	k_volt_recovery_fall            : 0.000;
+	k_volt_recovery_rise            : 0.000;
+	k_volt_setup_fall               : 0.000;
+	k_volt_setup_rise               : 0.000;
+
+
+        operating_conditions(tt_1p2v_25c) {
+		process	 : 1;
+		temperature	 : 25.000;
+		voltage	 : 1.200;
+		tree_type	 : balanced_tree;
+	}
+        default_operating_conditions : tt_1p2v_25c;
+	wire_load("sample") {
+		resistance	 : 1.6e-05;
+		capacitance	 : 0.0002;
+		area	 : 1.7;
+  		slope	 : 500;
+		fanout_length	 (1,500);
+	}
+        lu_table_template(Mem_cnnin1_bist_mux_delay_template) {
+           variable_1 : input_net_transition;
+           variable_2 : total_output_net_capacitance;
+               index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+               index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+        lu_table_template(Mem_cnnin1_mux_mem_out_delay_template) {
+           variable_1 : input_net_transition;
+           variable_2 : total_output_net_capacitance;
+               index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+               index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+        lu_table_template(Mem_cnnin1_mem_out_delay_template) {
+           variable_1 : input_net_transition;
+           variable_2 : total_output_net_capacitance;
+               index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+               index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+	lu_table_template(Mem_cnnin1_bist_mux_slew_template) {
+           variable_1 : total_output_net_capacitance;
+               index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+	lu_table_template(Mem_cnnin1_mem_out_slew_template) {
+           variable_1 : total_output_net_capacitance;
+               index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+	lu_table_template(Mem_cnnin1_clk_setup_constraint_template) {
+           variable_1 : related_pin_transition;
+           variable_2 : constrained_pin_transition;
+               index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+               index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+	lu_table_template(Mem_cnnin1_constraint_template) {
+           variable_1 : related_pin_transition;
+           variable_2 : constrained_pin_transition;
+               index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+               index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+        power_lut_template(Mem_cnnin1_energy_template_clkslew_load) {
+           variable_1 : input_transition_time;
+           variable_2 : total_output_net_capacitance;
+               index_1 ("1000, 1001");
+               index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+        power_lut_template(Mem_cnnin1_energy_template_sigslew_load) {
+           variable_1 : input_transition_time;
+           variable_2 : total_output_net_capacitance;
+               index_1 ("1000, 1001");
+               index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+        power_lut_template(Mem_cnnin1_energy_template_load) {
+           variable_1 : total_output_net_capacitance;
+               index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+        power_lut_template(Mem_cnnin1_energy_template_clkslew) {
+           variable_1 : input_transition_time;
+               index_1 ("1000, 1001");
+        }
+        power_lut_template(Mem_cnnin1_energy_template_sigslew) {
+           variable_1 : input_transition_time;
+               index_1 ("1000, 1001");
+        }
+	library_features(report_delay_calculation);
+	type (Mem_cnnin1_DATA) {
+		base_type : array ;
+		data_type : bit ;
+		bit_width : 64;
+		bit_from : 63;
+		bit_to : 0 ;
+		downto : true ;
+	}
+	type (Mem_cnnin1_UPM) {
+		base_type : array ;
+		data_type : bit ;
+		bit_width : 3;
+		bit_from : 2;
+		bit_to : 0 ;
+		downto : true ;
+	}
+	type (Mem_cnnin1_ADDRESS) {
+		base_type : array ;
+		data_type : bit ;
+		bit_width : 8;
+		bit_from : 7;
+		bit_to : 0 ;
+		downto : true ;
+	}
+cell(Mem_cnnin1) {
+	area		 : 189854.831;
+	dont_use	 : TRUE;
+	dont_touch	 : TRUE;
+        interface_timing : TRUE;
+	memory() {
+		type : ram;
+		address_width : 8;
+		word_width : 64;
+	}
+        bus(QA)   {
+                bus_type : Mem_cnnin1_DATA;
+		direction : output;
+		max_capacitance : 0.860;
+                memory_read() {
+			address : AA;
+		}
+                timing() {
+                        related_pin :   "CLKA" ;
+                        timing_type : rising_edge ;
+                        timing_sense : non_unate;
+                        cell_rise(Mem_cnnin1_mem_out_delay_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.000, 0.030, 0.060, 0.120, 0.280, 0.560, 0.860");
+                        values ( \
+                          "2.298, 2.344, 2.390, 2.483, 2.730, 3.036, 3.363", \
+                          "2.312, 2.358, 2.404, 2.497, 2.744, 3.050, 3.377", \
+                          "2.329, 2.376, 2.422, 2.515, 2.761, 3.068, 3.394", \
+                          "2.365, 2.411, 2.457, 2.550, 2.797, 3.103, 3.430", \
+                          "2.435, 2.482, 2.528, 2.621, 2.868, 3.174, 3.501", \
+                          "2.577, 2.623, 2.670, 2.762, 3.009, 3.316, 3.642", \
+                          "2.648, 2.694, 2.740, 2.833, 3.080, 3.386, 3.713" \
+                        )
+                        }
+                        rise_transition(Mem_cnnin1_mem_out_slew_template) {
+                        index_1 ("0.000, 0.030, 0.060, 0.120, 0.280, 0.560, 0.860");
+                        values ("0.058, 0.147, 0.237, 0.417, 0.896, 1.734, 2.632")
+                        }
+                        cell_fall(Mem_cnnin1_mem_out_delay_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.000, 0.030, 0.060, 0.120, 0.280, 0.560, 0.860");
+                        values ( \
+                          "2.298, 2.344, 2.390, 2.483, 2.730, 3.036, 3.363", \
+                          "2.312, 2.358, 2.404, 2.497, 2.744, 3.050, 3.377", \
+                          "2.329, 2.376, 2.422, 2.515, 2.761, 3.068, 3.394", \
+                          "2.365, 2.411, 2.457, 2.550, 2.797, 3.103, 3.430", \
+                          "2.435, 2.482, 2.528, 2.621, 2.868, 3.174, 3.501", \
+                          "2.577, 2.623, 2.670, 2.762, 3.009, 3.316, 3.642", \
+                          "2.648, 2.694, 2.740, 2.833, 3.080, 3.386, 3.713" \
+                        )
+                        }
+                        fall_transition(Mem_cnnin1_mem_out_slew_template) {
+                        index_1 ("0.000, 0.030, 0.060, 0.120, 0.280, 0.560, 0.860");
+                        values ("0.083, 0.145, 0.208, 0.332, 0.663, 1.242, 1.863")
+                        }
+                }
+        }
+        bus(QB)   {
+                bus_type : Mem_cnnin1_DATA;
+		direction : output;
+		max_capacitance : 0.860;
+                memory_read() {
+			address : AB;
+		}
+                timing() {
+                        related_pin :   "CLKB" ;
+                        timing_type : rising_edge ;
+                        timing_sense : non_unate;
+                        cell_rise(Mem_cnnin1_mem_out_delay_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.000, 0.030, 0.060, 0.120, 0.280, 0.560, 0.860");
+                        values ( \
+                          "2.298, 2.344, 2.390, 2.483, 2.730, 3.036, 3.363", \
+                          "2.312, 2.358, 2.404, 2.497, 2.744, 3.050, 3.377", \
+                          "2.329, 2.376, 2.422, 2.515, 2.761, 3.068, 3.394", \
+                          "2.365, 2.411, 2.457, 2.550, 2.797, 3.103, 3.430", \
+                          "2.435, 2.482, 2.528, 2.621, 2.868, 3.174, 3.501", \
+                          "2.577, 2.623, 2.670, 2.762, 3.009, 3.316, 3.642", \
+                          "2.648, 2.694, 2.740, 2.833, 3.080, 3.386, 3.713" \
+                        )
+                        }
+                        rise_transition(Mem_cnnin1_mem_out_slew_template) {
+                        index_1 ("0.000, 0.030, 0.060, 0.120, 0.280, 0.560, 0.860");
+                        values ("0.058, 0.147, 0.237, 0.417, 0.896, 1.734, 2.632")
+                        }
+                        cell_fall(Mem_cnnin1_mem_out_delay_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.000, 0.030, 0.060, 0.120, 0.280, 0.560, 0.860");
+                        values ( \
+                          "2.298, 2.344, 2.390, 2.483, 2.730, 3.036, 3.363", \
+                          "2.312, 2.358, 2.404, 2.497, 2.744, 3.050, 3.377", \
+                          "2.329, 2.376, 2.422, 2.515, 2.761, 3.068, 3.394", \
+                          "2.365, 2.411, 2.457, 2.550, 2.797, 3.103, 3.430", \
+                          "2.435, 2.482, 2.528, 2.621, 2.868, 3.174, 3.501", \
+                          "2.577, 2.623, 2.670, 2.762, 3.009, 3.316, 3.642", \
+                          "2.648, 2.694, 2.740, 2.833, 3.080, 3.386, 3.713" \
+                        )
+                        }
+                        fall_transition(Mem_cnnin1_mem_out_slew_template) {
+                        index_1 ("0.000, 0.030, 0.060, 0.120, 0.280, 0.560, 0.860");
+                        values ("0.083, 0.145, 0.208, 0.332, 0.663, 1.242, 1.863")
+                        }
+                }
+        }
+        pin(CLKA)   {
+		direction : input;
+		capacitance : 0.133;
+                clock : true;
+                max_transition : 1.000;
+                timing() {
+                        related_pin     : "CLKB" ;
+                        timing_type     : setup_rising ;
+                        rise_constraint(Mem_cnnin1_clk_setup_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "2.558, 2.558, 2.558, 2.558, 2.558, 2.558, 2.558", \
+                          "2.558, 2.558, 2.558, 2.558, 2.558, 2.558, 2.558", \
+                          "2.558, 2.558, 2.558, 2.558, 2.558, 2.558, 2.558", \
+                          "2.558, 2.558, 2.558, 2.558, 2.558, 2.558, 2.558", \
+                          "2.558, 2.558, 2.558, 2.558, 2.558, 2.558, 2.558", \
+                          "2.558, 2.558, 2.558, 2.558, 2.558, 2.558, 2.558", \
+                          "2.558, 2.558, 2.558, 2.558, 2.558, 2.558, 2.558" \
+                        )
+                        }
+                 }
+                min_pulse_width_high : 0.218 ;
+                min_pulse_width_low  : 0.319 ;
+                min_period           : 3.285 ;
+
+
+                internal_power(){
+                        when : "(!CENA & ! \
+                                 (WENA) \
+                                ) \
+                                 ";
+                        rise_power(Mem_cnnin1_energy_template_clkslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("103.902, 103.902")
+                        }
+                        fall_power(Mem_cnnin1_energy_template_clkslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("0.000, 0.000")
+                        }
+                }
+                internal_power(){
+                        when : "(!CENA & \
+                                 (WENA) \
+                                ) \
+                                 ";
+                        rise_power(Mem_cnnin1_energy_template_clkslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("75.803, 75.803")
+                        }
+                        fall_power(Mem_cnnin1_energy_template_clkslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("0.000, 0.000")
+                        }
+                }
+         internal_power(){
+                 when : "(CENA)";
+                        rise_power(Mem_cnnin1_energy_template_clkslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("0.018, 0.018")
+                        }
+                        fall_power(Mem_cnnin1_energy_template_clkslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("0.000, 0.000")
+                        }
+                }
+        }
+
+        pin(CENA)   {
+                direction : input;
+                capacitance : 0.010;
+                timing() {
+                        related_pin     : CLKA;
+                        timing_type     : setup_rising ;
+                        rise_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "1.190, 1.202, 1.216, 1.245, 1.303, 1.418, 1.476", \
+                          "1.176, 1.188, 1.202, 1.231, 1.289, 1.404, 1.462", \
+                          "1.158, 1.170, 1.184, 1.213, 1.271, 1.387, 1.444", \
+                          "1.123, 1.135, 1.149, 1.178, 1.236, 1.351, 1.409", \
+                          "1.052, 1.064, 1.078, 1.107, 1.165, 1.280, 1.338", \
+                          "0.911, 0.922, 0.937, 0.966, 1.023, 1.139, 1.197", \
+                          "0.840, 0.852, 0.866, 0.895, 0.953, 1.068, 1.126" \
+                        )
+                        }
+                        fall_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "1.048, 1.057, 1.068, 1.091, 1.136, 1.226, 1.271", \
+                          "1.034, 1.043, 1.054, 1.077, 1.122, 1.212, 1.257", \
+                          "1.016, 1.025, 1.036, 1.059, 1.104, 1.194, 1.239", \
+                          "0.981, 0.990, 1.001, 1.023, 1.069, 1.159, 1.204", \
+                          "0.910, 0.919, 0.930, 0.953, 0.998, 1.088, 1.133", \
+                          "0.768, 0.777, 0.789, 0.811, 0.856, 0.946, 0.991", \
+                          "0.698, 0.707, 0.718, 0.740, 0.785, 0.876, 0.921" \
+                        )
+                        }
+                } 
+                timing() {
+                        related_pin     : CLKA;
+                        timing_type     : hold_rising ;
+                        rise_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.538, 0.527, 0.512, 0.483, 0.450, 0.450, 0.450", \
+                          "0.609, 0.597, 0.583, 0.554, 0.496, 0.450, 0.450" \
+                        )
+                        }
+                        fall_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450" \
+                        )
+                        }
+               }
+        }
+        pin(WENA){
+                direction : input;
+                capacitance : 0.010;
+                timing() {
+                        related_pin     : CLKA;
+                        timing_type     : setup_rising ;
+                        rise_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "1.192, 1.206, 1.222, 1.254, 1.320, 1.450, 1.515", \
+                          "1.178, 1.191, 1.208, 1.240, 1.305, 1.436, 1.501", \
+                          "1.161, 1.174, 1.190, 1.223, 1.288, 1.418, 1.483", \
+                          "1.125, 1.138, 1.155, 1.187, 1.252, 1.383, 1.448", \
+                          "1.055, 1.068, 1.084, 1.116, 1.182, 1.312, 1.377", \
+                          "0.913, 0.926, 0.942, 0.975, 1.040, 1.170, 1.235", \
+                          "0.842, 0.855, 0.872, 0.904, 0.969, 1.100, 1.165" \
+                        )
+                        }
+                        fall_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "1.456, 1.466, 1.478, 1.502, 1.551, 1.649, 1.697", \
+                          "1.442, 1.452, 1.464, 1.488, 1.537, 1.634, 1.683", \
+                          "1.424, 1.434, 1.446, 1.471, 1.519, 1.617, 1.666", \
+                          "1.389, 1.399, 1.411, 1.435, 1.484, 1.581, 1.630", \
+                          "1.318, 1.328, 1.340, 1.364, 1.413, 1.511, 1.559", \
+                          "1.177, 1.186, 1.199, 1.223, 1.272, 1.369, 1.418", \
+                          "1.106, 1.116, 1.128, 1.152, 1.201, 1.298, 1.347" \
+                        )
+                        }
+                } 
+                timing() {
+                        related_pin     : CLKA;
+                        timing_type     : hold_rising ;
+                        rise_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450" \
+                        )
+                        }
+                        fall_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450" \
+                        )
+                        }
+               }
+        }
+        bus(AA)   {
+                bus_type : Mem_cnnin1_ADDRESS;
+                direction : input;
+                capacitance : 0.017;
+                timing() {
+                        related_pin     : CLKA;
+                        timing_type     : setup_rising ;
+                        rise_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.976, 0.984, 0.994, 1.013, 1.052, 1.129, 1.168", \
+                          "0.962, 0.970, 0.980, 0.999, 1.038, 1.115, 1.154", \
+                          "0.945, 0.952, 0.962, 0.981, 1.020, 1.098, 1.136", \
+                          "0.909, 0.917, 0.927, 0.946, 0.985, 1.062, 1.101", \
+                          "0.838, 0.846, 0.856, 0.875, 0.914, 0.991, 1.030", \
+                          "0.697, 0.705, 0.714, 0.734, 0.773, 0.850, 0.889", \
+                          "0.626, 0.634, 0.644, 0.663, 0.702, 0.779, 0.818" \
+                        )
+                        }
+                        fall_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.627, 0.634, 0.644, 0.662, 0.700, 0.775, 0.813", \
+                          "0.612, 0.620, 0.629, 0.648, 0.686, 0.761, 0.799", \
+                          "0.595, 0.602, 0.612, 0.631, 0.668, 0.744, 0.781", \
+                          "0.559, 0.567, 0.576, 0.595, 0.633, 0.708, 0.746", \
+                          "0.489, 0.496, 0.506, 0.524, 0.562, 0.637, 0.675", \
+                          "0.347, 0.355, 0.364, 0.383, 0.421, 0.496, 0.534", \
+                          "0.276, 0.284, 0.293, 0.312, 0.350, 0.425, 0.463" \
+                        )
+                        }
+                } 
+                timing() {
+                        related_pin     : CLKA;
+                        timing_type     : hold_rising ;
+                        rise_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220", \
+                          "0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220", \
+                          "0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220", \
+                          "0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220", \
+                          "0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220", \
+                          "0.301, 0.294, 0.284, 0.265, 0.226, 0.220, 0.220", \
+                          "0.372, 0.364, 0.355, 0.335, 0.297, 0.220, 0.220" \
+                        )
+                        }
+                        fall_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220", \
+                          "0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220", \
+                          "0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220", \
+                          "0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220", \
+                          "0.289, 0.281, 0.272, 0.253, 0.220, 0.220, 0.220", \
+                          "0.430, 0.423, 0.413, 0.395, 0.357, 0.281, 0.244", \
+                          "0.501, 0.494, 0.484, 0.465, 0.428, 0.352, 0.315" \
+                        )
+                        }
+               }
+                internal_power(){
+                        when : "CENA";
+                        rise_power(Mem_cnnin1_energy_template_sigslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("0.721, 0.721")
+                        }
+                        fall_power(Mem_cnnin1_energy_template_sigslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("0.721, 0.721")
+                        }
+                }
+        }
+        bus(DA)   {
+                bus_type : Mem_cnnin1_DATA;
+                memory_write() {
+                        address : AA;
+                        clocked_on : "CLKA";
+                }
+                direction : input;
+                capacitance : 0.002;
+                timing() {
+                        related_pin     : CLKA;
+                        timing_type     : setup_rising ;
+                        rise_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.942, 0.949, 0.957, 0.974, 1.008, 1.076, 1.110", \
+                          "0.928, 0.934, 0.943, 0.960, 0.994, 1.062, 1.095", \
+                          "0.910, 0.917, 0.925, 0.942, 0.976, 1.044, 1.078", \
+                          "0.875, 0.881, 0.890, 0.907, 0.941, 1.008, 1.042", \
+                          "0.804, 0.811, 0.819, 0.836, 0.870, 0.938, 0.972", \
+                          "0.662, 0.669, 0.678, 0.695, 0.728, 0.796, 0.830", \
+                          "0.592, 0.598, 0.607, 0.624, 0.658, 0.725, 0.759" \
+                        )
+                        }
+                        fall_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.983, 0.994, 1.008, 1.036, 1.092, 1.203, 1.259", \
+                          "0.969, 0.980, 0.994, 1.022, 1.077, 1.189, 1.244", \
+                          "0.951, 0.962, 0.976, 1.004, 1.060, 1.171, 1.227", \
+                          "0.916, 0.927, 0.941, 0.969, 1.024, 1.136, 1.191", \
+                          "0.845, 0.856, 0.870, 0.898, 0.954, 1.065, 1.121", \
+                          "0.704, 0.715, 0.729, 0.757, 0.812, 0.923, 0.979", \
+                          "0.633, 0.644, 0.658, 0.686, 0.741, 0.853, 0.908" \
+                        )
+                        }
+                } 
+                timing() {
+                        related_pin     : CLKA;
+                        timing_type     : hold_rising ;
+                        rise_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450" \
+                        )
+                        }
+                        fall_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.506, 0.495, 0.481, 0.453, 0.450, 0.450, 0.450", \
+                          "0.647, 0.636, 0.622, 0.595, 0.539, 0.450, 0.450", \
+                          "0.718, 0.707, 0.693, 0.665, 0.610, 0.498, 0.450" \
+                        )
+                        }
+               }
+        }
+        pin(CLKB)   {
+		direction : input;
+		capacitance : 0.133;
+                clock : true;
+                max_transition : 1.000;
+                timing() {
+                        related_pin     : "CLKA" ;
+                        timing_type     : setup_rising ;
+                        rise_constraint(Mem_cnnin1_clk_setup_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "2.558, 2.558, 2.558, 2.558, 2.558, 2.558, 2.558", \
+                          "2.558, 2.558, 2.558, 2.558, 2.558, 2.558, 2.558", \
+                          "2.558, 2.558, 2.558, 2.558, 2.558, 2.558, 2.558", \
+                          "2.558, 2.558, 2.558, 2.558, 2.558, 2.558, 2.558", \
+                          "2.558, 2.558, 2.558, 2.558, 2.558, 2.558, 2.558", \
+                          "2.558, 2.558, 2.558, 2.558, 2.558, 2.558, 2.558", \
+                          "2.558, 2.558, 2.558, 2.558, 2.558, 2.558, 2.558" \
+                        )
+                        }
+                 }
+                min_pulse_width_high : 0.218 ;
+                min_pulse_width_low  : 0.319 ;
+                min_period           : 3.285 ;
+
+
+                internal_power(){
+                        when : "(!CENB & ! \
+                                 (WENB) \
+                                ) \
+                                 ";
+                        rise_power(Mem_cnnin1_energy_template_clkslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("103.902, 103.902")
+                        }
+                        fall_power(Mem_cnnin1_energy_template_clkslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("0.000, 0.000")
+                        }
+                }
+                internal_power(){
+                        when : "(!CENB & \
+                                 (WENB) \
+                                ) \
+                                 ";
+                        rise_power(Mem_cnnin1_energy_template_clkslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("75.803, 75.803")
+                        }
+                        fall_power(Mem_cnnin1_energy_template_clkslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("0.000, 0.000")
+                        }
+                }
+         internal_power(){
+                 when : "(CENB)";
+                        rise_power(Mem_cnnin1_energy_template_clkslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("0.018, 0.018")
+                        }
+                        fall_power(Mem_cnnin1_energy_template_clkslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("0.000, 0.000")
+                        }
+                }
+        }
+
+        pin(CENB)   {
+                direction : input;
+                capacitance : 0.010;
+                timing() {
+                        related_pin     : CLKB;
+                        timing_type     : setup_rising ;
+                        rise_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "1.190, 1.202, 1.216, 1.245, 1.303, 1.418, 1.476", \
+                          "1.176, 1.188, 1.202, 1.231, 1.289, 1.404, 1.462", \
+                          "1.158, 1.170, 1.184, 1.213, 1.271, 1.387, 1.444", \
+                          "1.123, 1.135, 1.149, 1.178, 1.236, 1.351, 1.409", \
+                          "1.052, 1.064, 1.078, 1.107, 1.165, 1.280, 1.338", \
+                          "0.911, 0.922, 0.937, 0.966, 1.023, 1.139, 1.197", \
+                          "0.840, 0.852, 0.866, 0.895, 0.953, 1.068, 1.126" \
+                        )
+                        }
+                        fall_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "1.048, 1.057, 1.068, 1.091, 1.136, 1.226, 1.271", \
+                          "1.034, 1.043, 1.054, 1.077, 1.122, 1.212, 1.257", \
+                          "1.016, 1.025, 1.036, 1.059, 1.104, 1.194, 1.239", \
+                          "0.981, 0.990, 1.001, 1.023, 1.069, 1.159, 1.204", \
+                          "0.910, 0.919, 0.930, 0.953, 0.998, 1.088, 1.133", \
+                          "0.768, 0.777, 0.789, 0.811, 0.856, 0.946, 0.991", \
+                          "0.698, 0.707, 0.718, 0.740, 0.785, 0.876, 0.921" \
+                        )
+                        }
+                } 
+                timing() {
+                        related_pin     : CLKB;
+                        timing_type     : hold_rising ;
+                        rise_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.538, 0.527, 0.512, 0.483, 0.450, 0.450, 0.450", \
+                          "0.609, 0.597, 0.583, 0.554, 0.496, 0.450, 0.450" \
+                        )
+                        }
+                        fall_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450" \
+                        )
+                        }
+               }
+        }
+        pin(WENB){
+                direction : input;
+                capacitance : 0.010;
+                timing() {
+                        related_pin     : CLKB;
+                        timing_type     : setup_rising ;
+                        rise_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "1.192, 1.206, 1.222, 1.254, 1.320, 1.450, 1.515", \
+                          "1.178, 1.191, 1.208, 1.240, 1.305, 1.436, 1.501", \
+                          "1.161, 1.174, 1.190, 1.223, 1.288, 1.418, 1.483", \
+                          "1.125, 1.138, 1.155, 1.187, 1.252, 1.383, 1.448", \
+                          "1.055, 1.068, 1.084, 1.116, 1.182, 1.312, 1.377", \
+                          "0.913, 0.926, 0.942, 0.975, 1.040, 1.170, 1.235", \
+                          "0.842, 0.855, 0.872, 0.904, 0.969, 1.100, 1.165" \
+                        )
+                        }
+                        fall_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "1.456, 1.466, 1.478, 1.502, 1.551, 1.649, 1.697", \
+                          "1.442, 1.452, 1.464, 1.488, 1.537, 1.634, 1.683", \
+                          "1.424, 1.434, 1.446, 1.471, 1.519, 1.617, 1.666", \
+                          "1.389, 1.399, 1.411, 1.435, 1.484, 1.581, 1.630", \
+                          "1.318, 1.328, 1.340, 1.364, 1.413, 1.511, 1.559", \
+                          "1.177, 1.186, 1.199, 1.223, 1.272, 1.369, 1.418", \
+                          "1.106, 1.116, 1.128, 1.152, 1.201, 1.298, 1.347" \
+                        )
+                        }
+                } 
+                timing() {
+                        related_pin     : CLKB;
+                        timing_type     : hold_rising ;
+                        rise_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450" \
+                        )
+                        }
+                        fall_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450" \
+                        )
+                        }
+               }
+        }
+        bus(AB)   {
+                bus_type : Mem_cnnin1_ADDRESS;
+                direction : input;
+                capacitance : 0.017;
+                timing() {
+                        related_pin     : CLKB;
+                        timing_type     : setup_rising ;
+                        rise_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.976, 0.984, 0.994, 1.013, 1.052, 1.129, 1.168", \
+                          "0.962, 0.970, 0.980, 0.999, 1.038, 1.115, 1.154", \
+                          "0.945, 0.952, 0.962, 0.981, 1.020, 1.098, 1.136", \
+                          "0.909, 0.917, 0.927, 0.946, 0.985, 1.062, 1.101", \
+                          "0.838, 0.846, 0.856, 0.875, 0.914, 0.991, 1.030", \
+                          "0.697, 0.705, 0.714, 0.734, 0.773, 0.850, 0.889", \
+                          "0.626, 0.634, 0.644, 0.663, 0.702, 0.779, 0.818" \
+                        )
+                        }
+                        fall_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.627, 0.634, 0.644, 0.662, 0.700, 0.775, 0.813", \
+                          "0.612, 0.620, 0.629, 0.648, 0.686, 0.761, 0.799", \
+                          "0.595, 0.602, 0.612, 0.631, 0.668, 0.744, 0.781", \
+                          "0.559, 0.567, 0.576, 0.595, 0.633, 0.708, 0.746", \
+                          "0.489, 0.496, 0.506, 0.524, 0.562, 0.637, 0.675", \
+                          "0.347, 0.355, 0.364, 0.383, 0.421, 0.496, 0.534", \
+                          "0.276, 0.284, 0.293, 0.312, 0.350, 0.425, 0.463" \
+                        )
+                        }
+                } 
+                timing() {
+                        related_pin     : CLKB;
+                        timing_type     : hold_rising ;
+                        rise_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220", \
+                          "0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220", \
+                          "0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220", \
+                          "0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220", \
+                          "0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220", \
+                          "0.301, 0.294, 0.284, 0.265, 0.226, 0.220, 0.220", \
+                          "0.372, 0.364, 0.355, 0.335, 0.297, 0.220, 0.220" \
+                        )
+                        }
+                        fall_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220", \
+                          "0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220", \
+                          "0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220", \
+                          "0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220", \
+                          "0.289, 0.281, 0.272, 0.253, 0.220, 0.220, 0.220", \
+                          "0.430, 0.423, 0.413, 0.395, 0.357, 0.281, 0.244", \
+                          "0.501, 0.494, 0.484, 0.465, 0.428, 0.352, 0.315" \
+                        )
+                        }
+               }
+                internal_power(){
+                        when : "CENB";
+                        rise_power(Mem_cnnin1_energy_template_sigslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("0.721, 0.721")
+                        }
+                        fall_power(Mem_cnnin1_energy_template_sigslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("0.721, 0.721")
+                        }
+                }
+        }
+        bus(DB)   {
+                bus_type : Mem_cnnin1_DATA;
+                memory_write() {
+                        address : AB;
+                        clocked_on : "CLKB";
+                }
+                direction : input;
+                capacitance : 0.002;
+                timing() {
+                        related_pin     : CLKB;
+                        timing_type     : setup_rising ;
+                        rise_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.942, 0.949, 0.957, 0.974, 1.008, 1.076, 1.110", \
+                          "0.928, 0.934, 0.943, 0.960, 0.994, 1.062, 1.095", \
+                          "0.910, 0.917, 0.925, 0.942, 0.976, 1.044, 1.078", \
+                          "0.875, 0.881, 0.890, 0.907, 0.941, 1.008, 1.042", \
+                          "0.804, 0.811, 0.819, 0.836, 0.870, 0.938, 0.972", \
+                          "0.662, 0.669, 0.678, 0.695, 0.728, 0.796, 0.830", \
+                          "0.592, 0.598, 0.607, 0.624, 0.658, 0.725, 0.759" \
+                        )
+                        }
+                        fall_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.983, 0.994, 1.008, 1.036, 1.092, 1.203, 1.259", \
+                          "0.969, 0.980, 0.994, 1.022, 1.077, 1.189, 1.244", \
+                          "0.951, 0.962, 0.976, 1.004, 1.060, 1.171, 1.227", \
+                          "0.916, 0.927, 0.941, 0.969, 1.024, 1.136, 1.191", \
+                          "0.845, 0.856, 0.870, 0.898, 0.954, 1.065, 1.121", \
+                          "0.704, 0.715, 0.729, 0.757, 0.812, 0.923, 0.979", \
+                          "0.633, 0.644, 0.658, 0.686, 0.741, 0.853, 0.908" \
+                        )
+                        }
+                } 
+                timing() {
+                        related_pin     : CLKB;
+                        timing_type     : hold_rising ;
+                        rise_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450" \
+                        )
+                        }
+                        fall_constraint(Mem_cnnin1_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.400, 0.800, 1.000");
+                        values ( \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.450, 0.450, 0.450, 0.450, 0.450, 0.450, 0.450", \
+                          "0.506, 0.495, 0.481, 0.453, 0.450, 0.450, 0.450", \
+                          "0.647, 0.636, 0.622, 0.595, 0.539, 0.450, 0.450", \
+                          "0.718, 0.707, 0.693, 0.665, 0.610, 0.498, 0.450" \
+                        )
+                        }
+               }
+        }
+
+        cell_leakage_power : 2.55E-3;
+}
+}

@@ -1,0 +1,13 @@
+(DELAYFILE
+(SDFVERSION "OVI 2.1")
+(DESIGN "cnn_toplevel")
+(DATE "Thu Apr 16 20:29:14 2020")
+(VENDOR "typical")
+(PROGRAM "Synopsys Design Compiler cmos")
+(VERSION "O-2018.06")
+(DIVIDER /)
+(VOLTAGE 1.20:1.20:1.20)
+(PROCESS "typical")
+(TEMPERATURE 25.00:25.00:25.00)
+(TIMESCALE 1ns)
+)

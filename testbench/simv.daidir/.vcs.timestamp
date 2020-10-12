@@ -1,0 +1,122 @@
+0 
+21
+-Mamsrun=
+-Masflags=--32
+-Mcc=gcc
+-Mcfl= -pipe -m32 -O -I/usr/caen/vcs-2017.12-SP2-1/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -m32 -m32 -rdynamic
+-Mobjects= /usr/caen/vcs-2017.12-SP2-1/linux/lib/libvirsim.so /usr/caen/vcs-2017.12-SP2-1/linux/lib/liberrorinf.so /usr/caen/vcs-2017.12-SP2-1/linux/lib/libsnpsmalloc.so /usr/caen/vcs-2017.12-SP2-1/linux/lib/libvfs.so
+-Mout=simv
+-Msaverestoreobj=/usr/caen/vcs-2017.12-SP2-1/linux/lib/vcs_save_restore_new.o
+-Msyslibs=/usr/caen/vcs-2017.12-SP2-1/linux/lib/ctype-stubs_32.a -ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -m32 -I/usr/caen/vcs-2017.12-SP2-1/include
+-gen_obj
+-picarchive
+-sverilog
+/usr/caen/vcs-2017.12-SP2-1/linux/bin/vcs1
+test.v
+88
+sysc_uni_pwd=/afs/umich.edu/class/eecs627/w20/group5/ConvCore/testbench
+mraarch=linux_64
+installdir=/usr/caen/hspice-2016.06/hspice
+_LMFILES_=/usr/caen/misc/modules/mmsim/15.10.498:/usr/caen/misc/modules/cadence-ic/6.1.7.500.2100:/usr/caen/misc/modules/calibre/2015.2_36.27:/usr/caen/misc/modules/synopsys-synth/2018.06:/usr/caen/misc/modules/innovus/18.10.000:/usr/caen/misc/modules/hspice/2016.06:/usr/caen/misc/modules/vcs/2017.12-SP2-1:/usr/caen/misc/modules/primetime/2018.06-1:/usr/caen/misc/modules/xa/2017.12-SP4:/afs/umich.edu/class/coe/modules/eecs627/w20:/usr/caen/misc/modules/vscode/1.32.3
+XLIB_SKIP_ARGB_VISUALS=1
+XDG_VTNR=1
+XDG_SESSION_TYPE=x11
+XDG_SESSION_ID=4
+XDG_SESSION_DESKTOP=gnome-classic
+XDG_SEAT=seat0
+XDG_RUNTIME_DIR=/run/user/114198788
+XDG_MENU_PREFIX=gnome-
+XDG_DATA_DIRS=/home/wbduan/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/:/usr/caen/misc/menus
+XDG_CURRENT_DESKTOP=GNOME-Classic:GNOME
+XAUTHORITY=/run/gdm/auth-for-wbduan-gov6fw/database
+WINDOWPATH=1
+VTE_VERSION=5202
+VMR_MODE_FLAG=32
+VCS_HOME=/usr/caen/vcs-2017.12-SP2-1
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux
+VCS_AMD_PURE32=1
+USERNAME=wbduan
+UNAME=/bin/uname
+TOOL_HOME=/usr/caen/vcs-2017.12-SP2-1/linux
+TMIARCH=RH_64
+TERM_PROGRAM_VERSION=1.32.3
+TERM_PROGRAM=vscode
+SYNOPSYS=/usr/caen/synopsys-synth-2018.06
+SSH_AUTH_SOCK=/run/user/114198788/keyring/ssh
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SSH_AGENT_PID=3582
+SNPS_VCS_CLANG_PATH=/fs/src/interfaces/LLVM_Project/QSCM/opt/llvm-3.9.1/linux64
+SNPS_PLATFORM=linux64
+SNPS_64=1
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/3423,unix/unix:/tmp/.ICE-unix/3423
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+QT_IM_MODULE=ibus
+QT_GRAPHICSSYSTEM_CHECKED=1
+OVA_UUM=0
+NO_AT_BRIDGE=1
+MSI2LMP_LIBRARY=/usr/share/lammps/frc_files
+MODULESHOME=/usr/share/Modules
+MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/caen/misc/modules:/afs/umich.edu/class/coe/modules
+MODEXEC_MSG=
+MGLS_LICENSE_FILE=/usr/caen/FLEXlm/data/license.dat.mentor
+MGC_HOME=/usr/caen/calibre-2015.2_36.27
+LOADEDMODULES=mmsim/15.10.498:cadence-ic/6.1.7.500.2100:calibre/2015.2_36.27:synopsys-synth/2018.06:innovus/18.10.000:hspice/2016.06:vcs/2017.12-SP2-1:primetime/2018.06-1:xa/2017.12-SP4:eecs627/w20:vscode/1.32.3
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+LAMMPS_POTENTIALS=/usr/share/lammps/potentials
+KRB5CCNAME=FILE:/tmp/krb5cc_114198788_fRh4O4
+KDEDIRS=/usr
+IMSETTINGS_MODULE=none
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+ICEAUTHORITY=/run/user/114198788/iceauthority
+HSP_HOME=/usr/caen/hspice-2016.06/hspice
+HSP_GCC_VERSION=4.8.3
+HSP_GCC=/usr/caen/hspice-2016.06/hspice/GNU/linux64/gcc-4.8.3/bin/gcc -m64
+HISTCONTROL=ignoredups
+GNOME_TERMINAL_SERVICE=:1.90
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/29294f9c_60f3_40ce_b664_bdcc44b49db5
+GNOME_SHELL_SESSION_MODE=classic
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GDM_LANG=en_US.UTF-8
+GDMSESSION=gnome-classic
+DESKTOP_SESSION=gnome-classic
+DESKTOP_AUTOSTART_ID=107f9ffb822f07d798158238025654366700000034230007
+DD_DONT_DO_OS_LOCKS=SET
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-rfEWwHJ0Sj,guid=25aa524a68292e3af40531bc5e5134d9
+COLORTERM=truecolor
+CMIARCH=RH_64
+CLS_CDSD_COMPATIBILITY_LOCKING=NO
+CHROME_DESKTOP=code-url-handler.desktop
+CDS_VERSION=IC6
+CDS_Netlisting_Mode=Analog
+CDS_LOAD_ENV=CSF
+CDS_INSTALL_DIR=/usr/caen/ic-6.1.7.500.2100/tools/dfII
+CDS_AUTO_64BIT=ALL
+CDSHOME=/usr/caen/ic-6.1.7.500.2100
+CDS=/usr/caen/ic-6.1.7.500.2100
+CALIBRE_HOME=/usr/caen/calibre-2015.2_36.27
+BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
+ARCH=linux64
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL=true
+0
+1
+1582430651 test.v
+5
+0 
+1531625224 /usr/caen/vcs-2017.12-SP2-1/linux/lib/libvirsim.so
+1531624645 /usr/caen/vcs-2017.12-SP2-1/linux/lib/liberrorinf.so
+1531624627 /usr/caen/vcs-2017.12-SP2-1/linux/lib/libsnpsmalloc.so
+1531624958 /usr/caen/vcs-2017.12-SP2-1/linux/lib/libvfs.so
+1582430658 simv.daidir

@@ -1,0 +1,62 @@
+10:08:24 AM - ARM Physical IP, Inc.
+10:08:24 AM - Linux caen-vnc-vm04.engin.umich.edu 3.10.0-1062.12.1.el7.x86_64 #1 SMP Thu Dec 12 06:44:49 EST 2019 x86_64 x86_64 x86_64 GNU/Linux
+10:08:24 AM - Version 2009Q1V1
+10:08:24 AM - GUI version 5.6.13
+10:08:24 AM - 
+10:08:24 AM - CONFIDENTIAL AND PROPRIETARY SOFTWARE OF ARM PHYSICAL IP, INC.
+10:08:24 AM - 
+10:08:24 AM - Copyright (c) 1993 - 2020 ARM Physical IP, Inc.  All Rights Reserved.
+10:08:24 AM - 
+10:08:24 AM - Use of this Software is subject to the terms and conditions of the
+10:08:24 AM - applicable license agreement with ARM Physical IP, Inc. 
+10:08:24 AM - In addition, this Software is protected by patents, copyright law 
+10:08:24 AM - and international treaties.
+10:08:24 AM - 
+10:08:24 AM - The copyright notice(s) in this Software does not indicate actual or
+10:08:24 AM - intended publication of this Software.
+10:08:24 AM - 
+10:08:24 AM - High Speed/Density Dual Port SRAM Generator, IBM CMRF8SF-LPVT Process
+10:08:24 AM - 
+10:08:24 AM - Log file is ACI.log
+10:08:24 AM - 
+10:08:42 AM - ASCII Datatable updated
+10:08:48 AM - command: /afs/umich.edu/class/eecs627/ibm13/IBM_cmrf8sf/arm_2009q1/lpvt_sram-dp-v20_2009q1v1/aci/ra2shd_v20/bin/ra2shd_v20 postscript -instname "Mem_cnnin2" -words 256 -bits 64 -frequency 1 -ring_width 4.0 -mux 4 -write_mask off -wp_size 8 -top_layer "met5-8" -power_type rings -horiz met3 -vert met4 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 6 -dpccm on -asvm on -corners ff_1p32v_m40c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_125c
+10:08:49 AM - PostScript Datasheet generator succeeded, created:
+10:08:49 AM -    Mem_cnnin2.ps
+10:08:49 AM - command: /afs/umich.edu/class/eecs627/ibm13/IBM_cmrf8sf/arm_2009q1/lpvt_sram-dp-v20_2009q1v1/aci/ra2shd_v20/bin/ra2shd_v20 ascii -instname "Mem_cnnin2" -words 256 -bits 64 -frequency 1 -ring_width 4.0 -mux 4 -write_mask off -wp_size 8 -top_layer "met5-8" -power_type rings -horiz met3 -vert met4 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 6 -dpccm on -asvm on -corners ff_1p32v_m40c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_125c
+10:08:49 AM - ASCII Datatable generator succeeded, created:
+10:08:49 AM -    Mem_cnnin2.dat
+10:08:49 AM - command: /afs/umich.edu/class/eecs627/ibm13/IBM_cmrf8sf/arm_2009q1/lpvt_sram-dp-v20_2009q1v1/aci/ra2shd_v20/bin/ra2shd_v20 verilog -instname "Mem_cnnin2" -words 256 -bits 64 -frequency 1 -ring_width 4.0 -mux 4 -write_mask off -wp_size 8 -top_layer "met5-8" -power_type rings -horiz met3 -vert met4 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 6 -dpccm on -asvm on -corners ff_1p32v_m40c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_125c
+10:08:49 AM - Verilog Model generator succeeded, created:
+10:08:49 AM -    Mem_cnnin2.v
+10:08:50 AM - command: /afs/umich.edu/class/eecs627/ibm13/IBM_cmrf8sf/arm_2009q1/lpvt_sram-dp-v20_2009q1v1/aci/ra2shd_v20/bin/ra2shd_v20 vhdl -instname "Mem_cnnin2" -words 256 -bits 64 -frequency 1 -ring_width 4.0 -mux 4 -write_mask off -wp_size 8 -top_layer "met5-8" -power_type rings -horiz met3 -vert met4 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 6 -dpccm on -asvm on -corners ff_1p32v_m40c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_125c
+10:08:50 AM - VHDL Model generator succeeded, created:
+10:08:50 AM -    Mem_cnnin2.vhd
+10:08:50 AM - command: /afs/umich.edu/class/eecs627/ibm13/IBM_cmrf8sf/arm_2009q1/lpvt_sram-dp-v20_2009q1v1/aci/ra2shd_v20/bin/ra2shd_v20 synopsys -instname "Mem_cnnin2" -words 256 -bits 64 -frequency 1 -ring_width 4.0 -mux 4 -write_mask off -wp_size 8 -top_layer "met5-8" -power_type rings -horiz met3 -vert met4 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 6 -dpccm on -asvm on -libname USERLIB -corners ff_1p32v_m40c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_125c
+10:08:52 AM - Synopsys Model generator succeeded, created:
+10:08:52 AM -    Mem_cnnin2_ff_1p32v_m40c_syn.lib
+10:08:52 AM -    Mem_cnnin2_ff_1p65v_125c_syn.lib
+10:08:52 AM -    Mem_cnnin2_tt_1p2v_25c_syn.lib
+10:08:52 AM -    Mem_cnnin2_ss_1p08v_125c_syn.lib
+10:08:53 AM - command: /afs/umich.edu/class/eecs627/ibm13/IBM_cmrf8sf/arm_2009q1/lpvt_sram-dp-v20_2009q1v1/aci/ra2shd_v20/bin/ra2shd_v20 primetime -instname "Mem_cnnin2" -words 256 -bits 64 -frequency 1 -ring_width 4.0 -mux 4 -write_mask off -wp_size 8 -top_layer "met5-8" -power_type rings -horiz met3 -vert met4 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 6 -dpccm on -asvm on -corners ff_1p32v_m40c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_125c
+10:08:55 AM - PrimeTime Model generator succeeded, created:
+10:08:55 AM -    Mem_cnnin2_ff_1p32v_m40c.data
+10:08:55 AM -    Mem_cnnin2_ff_1p65v_125c.data
+10:08:55 AM -    Mem_cnnin2_tt_1p2v_25c.data
+10:08:55 AM -    Mem_cnnin2_ss_1p08v_125c.data
+10:08:55 AM -    Mem_cnnin2.mod
+10:08:55 AM - command: /afs/umich.edu/class/eecs627/ibm13/IBM_cmrf8sf/arm_2009q1/lpvt_sram-dp-v20_2009q1v1/aci/ra2shd_v20/bin/ra2shd_v20 tlf -instname "Mem_cnnin2" -words 256 -bits 64 -frequency 1 -ring_width 4.0 -mux 4 -write_mask off -wp_size 8 -top_layer "met5-8" -power_type rings -horiz met3 -vert met4 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 6 -dpccm on -asvm on -libname USERLIB -corners ff_1p32v_m40c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_125c
+10:08:58 AM - TLF Model generator succeeded, created:
+10:08:58 AM -    Mem_cnnin2_ff_1p32v_m40c.tlf
+10:08:58 AM -    Mem_cnnin2_ff_1p65v_125c.tlf
+10:08:58 AM -    Mem_cnnin2_tt_1p2v_25c.tlf
+10:08:58 AM -    Mem_cnnin2_ss_1p08v_125c.tlf
+10:08:59 AM - command: /afs/umich.edu/class/eecs627/ibm13/IBM_cmrf8sf/arm_2009q1/lpvt_sram-dp-v20_2009q1v1/aci/ra2shd_v20/bin/ra2shd_v20 vclef-fp -instname "Mem_cnnin2" -words 256 -bits 64 -frequency 1 -ring_width 4.0 -mux 4 -write_mask off -wp_size 8 -top_layer "met5-8" -power_type rings -horiz met3 -vert met4 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 6 -dpccm on -asvm on -inst2ring blockages -site_def off -corners ff_1p32v_m40c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_125c
+10:09:00 AM - VCLEF Footprint generator succeeded, created:
+10:09:00 AM -    Mem_cnnin2.vclef
+10:09:01 AM - command: /afs/umich.edu/class/eecs627/ibm13/IBM_cmrf8sf/arm_2009q1/lpvt_sram-dp-v20_2009q1v1/aci/ra2shd_v20/bin/ra2shd_v20 gds2 -instname "Mem_cnnin2" -words 256 -bits 64 -frequency 1 -ring_width 4.0 -mux 4 -write_mask off -wp_size 8 -top_layer "met5-8" -power_type rings -horiz met3 -vert met4 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 6 -dpccm on -asvm on -corners ff_1p32v_m40c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_125c
+10:09:02 AM - GDSII Layout generator succeeded, created:
+10:09:02 AM -    Mem_cnnin2.gds2
+10:09:02 AM - command: /afs/umich.edu/class/eecs627/ibm13/IBM_cmrf8sf/arm_2009q1/lpvt_sram-dp-v20_2009q1v1/aci/ra2shd_v20/bin/ra2shd_v20 lvs -instname "Mem_cnnin2" -words 256 -bits 64 -frequency 1 -ring_width 4.0 -mux 4 -write_mask off -wp_size 8 -top_layer "met5-8" -power_type rings -horiz met3 -vert met4 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 6 -dpccm on -asvm on -corners ff_1p32v_m40c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_125c
+10:09:03 AM - LVS Netlist generator succeeded, created:
+10:09:03 AM -    Mem_cnnin2.cdl
